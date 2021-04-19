@@ -1,7 +1,7 @@
-export const singleDigitConverter = (digit) => {
+export const decimal2RomanSingleDigitConverter = (digit) => {
     let romanNumeral = '';
     let counter = digit
-    while(counter !== 0) {
+    while(counter > 0) {
         if (counter === 9) {
             romanNumeral += 'IX'
             counter -= 9
@@ -17,6 +17,5 @@ export const singleDigitConverter = (digit) => {
         }
     }
 
-    console.log(romanNumeral);
     return romanNumeral
 }
