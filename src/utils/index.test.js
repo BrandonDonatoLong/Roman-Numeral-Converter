@@ -1,4 +1,4 @@
-import { decimal2RomanConverter, romanToDecimalConverter } from "./index";
+import { RomanNumerals } from "./index";
 const decimalToRomanCases = [
   [-1, ""],
   [0, ""],
@@ -53,7 +53,7 @@ describe("singleDigitConverter", () => {
   it.each(decimalToRomanCases)(
     "test RomanNumeralization for singles digit: %i To Be %s",
     (input, expected) => {
-      expect(decimal2RomanConverter(input)).toBe(expected);
+      expect(RomanNumerals.toRoman(input)).toBe(expected);
     }
   );
 });
@@ -62,7 +62,7 @@ describe("RomanNumeral to Decimal Single Digit Converter", () => {
   it.each(romanToDecimalCases)(
     "test decimalization of roman numerals: %s To Be %d",
     (input, expected) => {
-      expect(romanToDecimalConverter(input)).toBe(expected);
+      expect(RomanNumerals.fromRoman(input)).toBe(expected);
     }
   );
 });
