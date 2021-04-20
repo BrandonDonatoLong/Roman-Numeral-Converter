@@ -1,23 +1,25 @@
 import LandingPageHeader from "./components/LandingPageHeader";
 import "@fontsource/roboto";
 import { Container, Typography } from "@material-ui/core";
+import CalculatorBody from "./components/CalculatorBody";
 
 function App() {
   return (
-    <Container maxWidth={"lg"}>
-      <LandingPageHeader />
-      <Typography variant="body1">
-        Edit <code>src/App.js</code> and save to reload.
-      </Typography>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
+    <>
+      <Container
+        maxWidth={"lg"}
+        style={{
+          marginBottom: "10px",
+          marginTop: "10px",
+          backgroundColor: "white",
+        }}
       >
-        Learn React
-      </a>
-    </Container>
+        <LandingPageHeader />
+      </Container>
+      <Container maxWidth={"lg"}>
+        <CalculatorBody />
+      </Container>
+    </>
   );
 }
 
