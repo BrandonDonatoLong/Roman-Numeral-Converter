@@ -54,29 +54,3 @@ export class RomanNumerals {
     return decimal;
   };
 }
-export const decimal2RomanConverter = (digit) => {
-  let romanNumeral = "";
-  let counter = digit;
-  for (const key in romanToDecimalMap) {
-    while (counter >= romanToDecimalMap[key]) {
-      counter -= romanToDecimalMap[key];
-      romanNumeral += key;
-    }
-  }
-
-  return romanNumeral;
-};
-
-export const romanToDecimalConverter = (romanNumeral) => {
-  let decimal = 0;
-  let counter = romanNumeral;
-
-  for (const key in romanToDecimalMap) {
-    while (counter.indexOf(key) === 0) {
-      counter = counter.replace(key, "");
-      decimal += romanToDecimalMap[key];
-    }
-  }
-
-  return decimal;
-};

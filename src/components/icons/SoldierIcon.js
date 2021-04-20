@@ -1,11 +1,12 @@
 import React from "react";
 
-function Icon() {
+function Icon(props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
       viewBox="0 0 379.06 734.4"
+      style={{ height: props.height }}
     >
       <g transform="translate(-33.326 -32.304)">
         <g stroke="#000" transform="translate(1112.9 314.29)">
