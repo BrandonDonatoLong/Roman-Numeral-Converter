@@ -30,12 +30,24 @@ export class RomanNumerals {
 
   static fromRoman = (romanNumeral) => {
     let decimal = 0;
-    let counter = romanNumeral;
+    // force an upper case just in case the input is not kosher
+    let tempRomanNumeral = romanNumeral.toUpperCase();
 
-    for (const key in this.romanToDecimalMap) {
-      while (counter.indexOf(key) === 0) {
-        counter = counter.replace(key, "");
-        decimal += this.romanToDecimalMap[key];
+    // need this top loop to handle removal if the sting isn't a part of roman decimal library
+    while (tempRomanNumeral.length != 0) {
+      let found = false;
+      for (const key in this.romanToDecimalMap) {
+        while (tempRomanNumeral.indexOf(key) === 0) {
+          found = true;
+          tempRomanNumeral = tempRomanNumeral.replace(key, "");
+          decimal += this.romanToDecimalMap[key];
+        }
+      }
+      if (!found) {
+        tempRomanNumeral = tempRomanNumeral.substr(
+          1,
+          tempRomanNumeral.length - 1
+        );
       }
     }
 

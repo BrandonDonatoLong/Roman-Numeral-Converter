@@ -1,6 +1,7 @@
 import { RomanNumerals } from "./index";
 const decimalToRomanCases = [
   [-1, ""],
+  ["abc1", ""],
   [0, ""],
   [2, "II"],
   [4, "IV"],
@@ -27,7 +28,7 @@ const romanToDecimalCases = [
   ["DCC", 700],
   ["D", 500],
   ["CD", 400],
-  ["CCC", 300],
+  ["CcC", 300],
   ["C", 100],
   ["XCIX", 99],
   ["XC", 90],
@@ -37,13 +38,16 @@ const romanToDecimalCases = [
   ["XL", 40],
   ["XXI", 21],
   ["XIX", 19],
-  ["XI", 11],
+  ["XAIX", 19],
+  ["XAMIX", 1019],
+  ["aXIa", 11],
   ["X", 10],
   ["IX", 9],
   ["VIII", 8],
   ["V", 5],
   ["IV", 4],
   ["III", 3],
+  ["abefg", 0],
   ["", 0],
 ];
 describe("singleDigitConverter", () => {
