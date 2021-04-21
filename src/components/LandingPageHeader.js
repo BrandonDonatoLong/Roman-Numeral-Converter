@@ -6,7 +6,6 @@ const LandingPageHeader = (props) => {
   return (
     <Grid
       container
-      xs={12}
       justify={"center"}
       spacing={2}
       style={{
@@ -18,7 +17,7 @@ const LandingPageHeader = (props) => {
       <Grid item xs={1}>
         <SoldierIcon height={"100px"} />
       </Grid>
-      <Grid item style={{ display: "flex", alignItems: "center" }}>
+      <Grid item xs={11} style={{ display: "flex", alignItems: "center" }}>
         <Typography variant="h3">
           Welcome to Brandon's Roman Numeral Calculator
         </Typography>

@@ -1,18 +1,8 @@
-import React, { useState } from "react";
-import {
-  Container,
-  Typography,
-  Card,
-  TextField,
-  Button,
-  Grid,
-} from "@material-ui/core";
-import { RomanNumerals } from "../utils";
+import React from "react";
+import { Container, Typography } from "@material-ui/core";
+import RomanConverter from "./RomanConverter";
 
 const CalculatorBody = () => {
-  const [decimal, setDecimal] = useState("");
-  const [roman, setRoman] = useState("");
-
   return (
     <Container
       maxWidth={"lg"}
@@ -46,52 +36,7 @@ const CalculatorBody = () => {
       <Typography gutterBottom variant={"body1"}>
         Enter the Roman numeral or number and press the <i>Convert</i> button:
       </Typography>
-      <Card
-        style={{
-          backgroundColor: "lightyellow",
-          marginBottom: "20px",
-          padding: "15px",
-        }}
-      >
-        <Grid style={{ paddingBottom: "5px" }}>
-          <TextField
-            variant={"filled"}
-            label={"Decimal Number"}
-            id={"DecimalNumber"}
-            type={"number"}
-            value={decimal}
-            size={"small"}
-            onChange={(e) => setDecimal(e.target.value)}
-          />
-          <Button
-            variant={"contained"}
-            color={"primary"}
-            size={"large"}
-            onClick={() => setRoman(RomanNumerals.toRoman(decimal))}
-          >
-            Convert To Roman Numerals
-          </Button>
-        </Grid>
-        <Grid style={{ paddingBottom: "5px" }}>
-          <TextField
-            variant={"filled"}
-            label={"Roman Numeral"}
-            id={"RomanNumeral"}
-            size={"small"}
-            type={"string"}
-            value={roman}
-            onChange={(e) => setRoman(e.target.value)}
-          />
-          <Button
-            variant={"contained"}
-            color={"primary"}
-            size={"large"}
-            onClick={() => setDecimal(RomanNumerals.fromRoman(roman))}
-          >
-            Convert From Roman Numerals
-          </Button>
-        </Grid>
-      </Card>
+      <RomanConverter />
     </Container>
   );
 };
