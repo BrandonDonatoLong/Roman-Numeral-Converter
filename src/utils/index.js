@@ -34,7 +34,7 @@ export class RomanNumerals {
     let tempRomanNumeral = romanNumeral.toUpperCase();
 
     // need this top loop to handle removal if the sting isn't a part of roman decimal library
-    while (tempRomanNumeral.length != 0) {
+    while (tempRomanNumeral.length !== 0) {
       let found = false;
       for (const key in this.romanToDecimalMap) {
         while (tempRomanNumeral.indexOf(key) === 0) {
