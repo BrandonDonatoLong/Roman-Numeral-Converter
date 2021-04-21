@@ -1,5 +1,8 @@
 import React from "react";
 
+// Icon downloaded from here: https://freesvg.org/roman-soldier (public domain)
+// then SVG converted using this tool https://svg2jsx.com/
+
 function Icon(props) {
   return (
     <svg

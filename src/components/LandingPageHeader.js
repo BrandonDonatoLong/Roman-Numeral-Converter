@@ -2,7 +2,7 @@ import React from "react";
 import SoldierIcon from "./icons/SoldierIcon";
 import { Grid, Typography } from "@material-ui/core";
 
-const LandingPageHeader = (props) => {
+const LandingPageHeader = () => {
   return (
     <Grid
       container
@@ -11,6 +11,7 @@ const LandingPageHeader = (props) => {
       style={{
         backgroundColor: "white",
         borderBottomColor: "#343434",
+        borderBottomWidth: "1px",
         borderBottomStyle: "solid",
       }}
     >

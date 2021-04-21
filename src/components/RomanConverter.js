@@ -2,6 +2,13 @@ import React, { useState } from "react";
 import { Button, Card, Grid, TextField } from "@material-ui/core";
 import { RomanNumerals } from "../utils";
 
+// Here is the "Simple UI" for the test. Basically the output of one will override the input of the other if you put
+// stuff in both. In my "competitor research" for this project I based a lot of the styling on this page
+// https://www.rapidtables.com/convert/number/roman-numerals-converter.html Including how it works. I thought it was a
+// good representation of how it should work and so I used it. I was going to if I had more time add the Calculation part
+// showing how the number was reached similar to that tool. But I decided to instead focus on code and typing my though
+// process into here
+
 const RomanConverter = () => {
   const [decimal, setDecimal] = useState("");
   const [roman, setRoman] = useState("");

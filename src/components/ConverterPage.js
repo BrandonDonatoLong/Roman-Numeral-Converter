@@ -2,7 +2,10 @@ import React from "react";
 import { Container, Typography } from "@material-ui/core";
 import RomanConverter from "./RomanConverter";
 
-// This component is the page component. I copied some text from wikipedia: https://en.wikipedia.org/wiki/Roman_numerals#Description previously I had Lorem Ipsum for mocking
+// This component is the page component. I copied some text from wikipedia:
+// https://en.wikipedia.org/wiki/Roman_numerals#Description previously I had Lorem Ipsum for mocking. If the goal for this
+// page is to be educational I wanted to offer a little something about why this existed. I was going to write it myself
+// but chose instead to outsource that from wikipedia
 const ConverterPage = () => {
   return (
     <Container
