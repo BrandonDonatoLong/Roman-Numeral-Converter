@@ -8,6 +8,7 @@ const RomanConverter = () => {
 
   return (
     <Card
+      align="center"
       style={{
         backgroundColor: "lightyellow",
         marginBottom: "20px",
@@ -44,7 +45,6 @@ const RomanConverter = () => {
           id={"roman-number-input"}
           data-test-id={"roman-text-field"}
           size={"small"}
-          type={"string"}
           style={{ paddingRight: "10px", width: "330px" }}
           value={roman}
           onChange={(e) => setRoman(e.target.value)}
