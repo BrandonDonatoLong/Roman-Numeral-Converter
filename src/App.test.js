@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-test("renders learn react link", () => {
+test("renders the base app", () => {
   render(<App />);
-  const linkElement = screen.getByText(/History/i);
-  expect(linkElement).toBeInTheDocument();
+  const historyHeader = screen.getByText(/History/i);
+  expect(historyHeader).toBeInTheDocument();
 });
