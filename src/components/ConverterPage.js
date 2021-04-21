@@ -3,7 +3,7 @@ import { Container, Typography } from "@material-ui/core";
 import RomanConverter from "./RomanConverter";
 
 // This component is the page component. I copied some text from wikipedia: https://en.wikipedia.org/wiki/Roman_numerals#Description previously I had Lorem Ipsum for mocking
-const CalculatorPage = () => {
+const ConverterPage = () => {
   return (
     <Container
       maxWidth={"lg"}
@@ -58,4 +58,4 @@ const CalculatorPage = () => {
     </Container>
   );
 };
-export default CalculatorPage;
+export default ConverterPage;

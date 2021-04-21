@@ -19,7 +19,7 @@ const LandingPageHeader = (props) => {
       </Grid>
       <Grid item xs={11} style={{ display: "flex", alignItems: "center" }}>
         <Typography variant="h3">
-          Welcome to Brandon's Roman Numeral Calculator
+          Welcome to Brandon's Roman Numeral Converter
         </Typography>
       </Grid>
     </Grid>
